@@ -6,13 +6,17 @@ import Button from 'react-bootstrap/Button';
 const Footer = (props) => {
 
   return(
-  <div className="">
+  <div className="text-white  footer">
 
-    <h1> Footer goes here </h1>
 
-    <div className="mb-2">
-      
-    </div>
+
+
+
+
+
+    <sup>&#174;</sup> Tiger Industries Co. &#128005;
+
+
 
   </div>
 

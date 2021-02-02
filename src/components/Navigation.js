@@ -13,17 +13,16 @@ const Navigation = (props) => {
   return(
   <div className="">
 
-  <Navbar bg="primary" variant="dark">
-    <Navbar.Brand href="#home">Never Alone</Navbar.Brand>
+  <Navbar bg="dark" variant="dark">
+    <Navbar.Brand href="#">Never Alone</Navbar.Brand>
     <Nav className="mr-auto">
+      <Nav.Link href="#SignUp">SignUp</Nav.Link>
+      <Nav.Link href="#Login">Login</Nav.Link>
       <Nav.Link href="#Profile">Profile</Nav.Link>
       <Nav.Link href="#Posts">Posts</Nav.Link>
       <Nav.Link href="#Inbox">Inbox</Nav.Link>
     </Nav>
-    <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-light">Search</Button>
-    </Form>
+
   </Navbar>
 
   </div>
@@ -34,3 +33,9 @@ const Navigation = (props) => {
 
 
 export default Navigation;
+
+
+// <Form inline>
+//   <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+//   <Button variant="outline-light">Search</Button>
+// </Form>

@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import Search from './components/Search';
 import Button from 'react-bootstrap/Button';
 import { Link, Route, HashRouter as Router } from 'react-router-dom';
+import Posts from './components/Posts';
+
 
 class App extends React.Component {
 
@@ -17,8 +19,13 @@ class App extends React.Component {
 
         <Router>
           <Navigation />
-          <Search />
-          <Route exact path="/" component={ Home } />
+          
+          <div className="container">
+            <Search />
+            <Route exact path="/" component={ Home } />
+            <Route exact path="/Posts" component={ Posts } />
+          </div>
+
 
           <Footer />
         </Router>

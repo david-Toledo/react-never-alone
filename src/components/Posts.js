@@ -29,7 +29,7 @@ class Posts extends React.Component {
         <h1> Recent Activity </h1>
 
         <ul>
-          {this.state.posts.map(post => (<li key={post.id}> <h3>Subject: {post.title}</h3> posted on: {post.created_at_formatted} by {post.user.name} in {post.user.address} <br /> <br /><p> Content:{post.body} </p></li>))}
+          {this.state.posts.map(post => (<li key={post.id}> <h3>Subject: {post.title}</h3> posted on: {post.created_at_formatted} by {post.user.name} in {post.user.address} <br /> Replies:{post.responses.length} <br /><p> Content:{post.body} </p></li>))}
         </ul>
 
 

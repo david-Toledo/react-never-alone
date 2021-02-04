@@ -21,7 +21,7 @@ const Navigation = (props) => {
   <div className="header">
 
   <Navbar className="header" bg="dark" variant="dark">
-    <Navbar.Brand href="/">Never Alone</Navbar.Brand>
+    <Navbar.Brand href="#">Never Alone</Navbar.Brand>
     <Nav className="mr-auto">
     <Nav.Link href="#">Home</Nav.Link>
     {

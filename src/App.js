@@ -21,7 +21,7 @@ class App extends React.Component {
 
   //App state
   state = {
-    currentUser: undefined
+    currentUser: 'loading'
   }
 
   //function to run on component mounting
@@ -47,6 +47,7 @@ class App extends React.Component {
   setCurrentUser = () => {
     let token = "Bearer " + localStorage.getItem("jwt");
     axios.defaults.headers.common['Authorization'] = token;
+    console.log("set current user", token, axios.defaults.headers.common['Authorization']);
     axios.get(`${BASE_URL}/users/current`)
     .then(res => {
       this.setState({currentUser: res.data})
@@ -63,7 +64,12 @@ class App extends React.Component {
     axios.defaults.headers.common['Authorization'] = undefined;
   }
 
+
   render(){
+    if(this.state.currentUser==="loading"){
+      return <p> Loading ...</p>
+    }
+
     return (
       <div>
 

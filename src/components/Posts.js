@@ -21,8 +21,9 @@ class Posts extends React.Component {
 
   componentDidMount(){
     console.log('posts Mounted on page');
-
+    console.log("token",axios.defaults.headers.common['Authorization']);
     axios.get(RAILS_URL)
+
     .then((res) =>{
       console.log('callback',res.data);
       this.setState({posts:res.data.reverse()});

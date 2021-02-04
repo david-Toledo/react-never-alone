@@ -23,7 +23,7 @@ const Navigation = (props) => {
   <Navbar className="header" bg="dark" variant="dark">
     <Navbar.Brand href="/">Never Alone</Navbar.Brand>
     <Nav className="mr-auto">
-    <Nav.Link href="/#">Home</Nav.Link>
+    <Nav.Link href="#">Home</Nav.Link>
     {
       props.user !== undefined
       ?

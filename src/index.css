@@ -82,3 +82,12 @@ textarea {
   background-color: rgba(0, 240, 255, 0.10);
 
 }
+
+.post{
+  /* border: 1px solid green */
+
+}
+
+ul {
+  list-style-type: none;
+}

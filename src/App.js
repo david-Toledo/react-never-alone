@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 // import Search from './components/Search';
 import Button from 'react-bootstrap/Button';
 import Posts from './components/Posts';
+import ShowPost from './components/ShowPost';
 
 
 const BASE_URL = 'http://localhost:3000'
@@ -87,6 +88,12 @@ class App extends React.Component {
             render={(props) => <Posts user={this.state.currentUser}
             {...props} />}
              />
+
+           <Route exact path="/showpost/:id"
+             render={(props) => <ShowPost user={this.state.currentUser}
+             {...props} />}
+              />
+
           </div>
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
 // import axios from 'axios';
 import Button from 'react-bootstrap/Button'
+import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
 // const BASE_URL = 'http://localhost:3000'
 
 class MyProfile extends React.Component{
@@ -9,7 +10,9 @@ class MyProfile extends React.Component{
   // state = {
   //   currentUser: {
   //     name: '',
-  //     email: ''
+  //     email: '',
+  //     about:'',
+  //     user_type:''
   //   }
   // }
   //
@@ -49,7 +52,9 @@ class MyProfile extends React.Component{
         <h6>{this.props.user.about}</h6>
         <h4>Type of User: </h4>
         <h6>{this.props.user.user_type}</h6>
-        
+
+
+
         <br />
         <Button variant="primary" href="#/posts">See latests posts!</Button>
 
@@ -61,3 +66,4 @@ class MyProfile extends React.Component{
 
 
 export default MyProfile
+// {this.props.user.image}

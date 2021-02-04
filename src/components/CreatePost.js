@@ -10,18 +10,19 @@ class CreatePost extends React.Component{
   };
 
   handleSubjectChange = (ev) => {
-    console.log('handleChange', ev.target.value);
+    // console.log('handleChange', ev.target.value);
     this.setState({title:ev.target.value});
   }
 
   handleContentChange = (ev) => {
-    console.log('handleChange', ev.target.value);
+    // console.log('handleChange', ev.target.value);
     this.setState({body:ev.target.value});
   }
 
   handleSubmit = (ev) => {
     ev.preventDefault();
     this.props.onContentSubmit(this.state.title, this.state.body);
+    ev.target.reset();
   }
 
   render(){

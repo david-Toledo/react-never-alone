@@ -4,19 +4,43 @@ import axios from 'axios';
 
 // const BASE_URL = 'http://localhost:3000/posts.json'
 
-const Search = (props) => {
+class Search extends React.Component {
 
-  return(
-  <div className="">
+  state = {
+    query:''
+  };
 
-     Search 
+  handleChange = (ev) => {
+    this.setState({query:ev.target.value})
+  }
+
+  handleSubmit = (ev) => {
+    ev.preventDefault();
+    console.log('submit!');
+    //Send search query to the parent component
+    // this.props.onSearch(this.state.query);
+    this.setState(ev.target.value);
+  }
+
+  render(){
+    return(
+      <div className="search">
+        <form >
+          <input type = "text" onChange={this.handleChange}/>
+          <button onSubmit={this.handleSubmit}> Search </button>
+          <br />
+        </form>
+
+      </div>
 
 
-  </div>
 
-  )
+    )
+
+  }
+
+
 }
-
 
 
 export default Search;
